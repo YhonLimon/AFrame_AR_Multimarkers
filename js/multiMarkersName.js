@@ -38,6 +38,33 @@ AFRAME.registerComponent('markers_start',{
 			textEl.object3D.rotation.set(-90, 0, 0);
 
 			markerEl.appendChild(textEl);
+			
+			
+			//Agregar objeto 3D a cada marcador
+			var el = document.createElement('a-entity');
+			el.setAttribute("obj-model", 'obj:url(TU MODELO3D.obj);mtl:url(TU MODELO3D.mtl)');
+			el.setAttribute("scale",'.10 .10 .10'); })
+			el.object3D.position.set(0, 0.7, 0);
+			el.object3D.rotation.set(-90, 0, 0);
+			
+			
+			var textEl = document.createElement('a-entity');
+			
+			textEl.setAttribute('id','text');
+			textEl.setAttribute('text',{color: 'red', align: 'center', value:markersNameArray[k], width: '5.5'});
+			textEl.object3D.position.set(0, 0.7, 0);
+			textEl.object3D.rotation.set(-90, 0, 0);
+
+			markerEl.appendChild(textEl);
+			
+
+			
+			
+			
+			
+			
+			
+			
 		}
 	}
 });
